@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Matthew Lewicki">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <title>Spotify Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+    crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/Spotify/css/estilo.css">
+
+    <!-- Custom Inline CSS for Centering -->
+    <style>
+        body, html {
+            height: 100%;
+        }
+        .login-container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .login-form img {
+            margin-bottom: 20px;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container login-container">
+        <div class="login-form">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/Spotify/imagens/spotify.svg" width="145" alt="Logo Spotify"/>
+            </a>
+            
+            <form method="post" name="loggin" action="#" id="loggin">
+                <fieldset class="form-group">
+                    <input id="username" name="username" type="text" placeholder="Username" class="form-control mb-2">
+                </fieldset>
+                <fieldset class="form-group">
+                    <input id="password" name="password" type="password" placeholder="Password" class="form-control mb-2">
+                </fieldset>
+                <fieldset>
+                    <input type="submit" name='submit' value="Sign In" class="btn btn-primary btn-block"/>
+                </fieldset>
+            </form>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" aria-label="Facebook">
+                            <img src="assets/Spotify/imagens/facebook.png" class="img-fluid" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" aria-label="Instagram">
+                            <img src="assets/Spotify/imagens/instagram.png" class="img-fluid" alt="Instagram">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" aria-label="Twitter">
+                            <img src="assets/Spotify/imagens/twitter.png" class="img-fluid" alt="Twitter">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript to handle form submission -->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Impede o comportamento padrão do envio do formulário
+            window.location.href = 'index.html';  // Redireciona para a página principal após login
+        });
+    </script>
+</body>
+</html>
